@@ -26,7 +26,7 @@ object bruno{
 		esFeliz = true
 	}
 	method  darBanoVapor(){
-	  peso = peso - 500 and tieneSed = true
+	  tieneSed = true
 	}
 	method tomarAgua(){
 		tieneSed = false
