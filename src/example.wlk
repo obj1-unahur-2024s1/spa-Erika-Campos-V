@@ -1,16 +1,21 @@
 object olivia{
-	var concentracion = 6
+	var gradoDeConcentracion = 6
 	
-	method concentracion(){
-		return concentracion
+	method gradoDeConcentracion(){
+		return gradoDeConcentracion
 	}
 	method recibeMasajes(){
-		concentracion = concentracion + 3
+		gradoDeConcentracion = gradoDeConcentracion + 3
 	}
 	method discutir(){
-		concentracion = concentracion - 1
+		gradoDeConcentracion = gradoDeConcentracion - 1
 	}
-	
+	method recibirMasajes(){
+		
+	}
+	method tomarBanhoVapor(){
+		
+	}
 }
 
 object bruno{
@@ -24,10 +29,14 @@ object bruno{
 	method peso(){
 		return peso
 	}
+	method tieneSed(){
+		return tieneSed
+	}
+	
 	method recibirMasajes(){
 		estaFeliz = true
 	}
-	method  tomarBanoVapor(){
+	method  tomarBanhoVapor(){
 	  peso = peso -500
 	  tieneSed = true
 	}
@@ -59,6 +68,13 @@ object ramiro{
 	var nivelContractura = 3
 	var tienePielGrasa = false
 	
+	method tienePielGrasa(){
+		return tienePielGrasa
+	}	
+	
+	method nivelContractura(){
+		return nivelContractura
+	}	
 	method recibirMasajes(){
 		if (nivelContractura == 0)
 		  nivelContractura = 0
@@ -67,7 +83,7 @@ object ramiro{
 		else
 		   nivelContractura = nivelContractura - 2
 	}
-	method tomarBanoVapor(){
+	method tomarBanhoVapor(){
 		tienePielGrasa = false
 	}
 	 method comerBigMac(){
@@ -75,7 +91,7 @@ object ramiro{
 	 }
 	 method bajarALaFosa(){
 	 	tienePielGrasa = true
-	 	nivelContractura = nivelContractura - 1
+	 	nivelContractura = nivelContractura + 1
 	 }
 	 method jugarPaddle(){
 	 	nivelContractura = nivelContractura + 3 
@@ -88,5 +104,10 @@ object ramiro{
 }
 
 object spa{
+	
+	method atender(persona){
+		persona.recibirMasajes()
+		persona.tomarBanhoVapor()
+	}
 	
 }
